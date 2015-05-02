@@ -1,0 +1,392 @@
+<!DOCTYPE html><html><head><title>Building Mapping Communities: HOT, Maptime, and everything in between</title><meta charset='utf-8'><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<link href='big.css' rel='stylesheet' type='text/css' />
+<style>
+  .maptime-excitement {
+    background-image: url(./images/maptime_excitement.gif);
+    text-shadow: 3px 3px 5px #222;
+    color: #eee;
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+  .tilegif {
+    background-image: url(./images/tiles.gif);
+    background-repeat: no-repeat;
+    background-position: center 60px;
+  }
+  .puppy1 {
+    background-image: url(./images/puppy1.gif);
+  }
+  .osm-101 {
+    background-image: url(./images/osm-101.jpg);
+    background-position: center 5px;
+    background-size: 80%;
+    color: #fff;
+    text-shadow: 3px 3px 5px #222;
+    background-repeat: no-repeat;
+  }
+  .hotosm {
+    background-image: url(./images/hotosm.png);
+    background-position: center 5px;
+    background-size: 80%;
+    color: #eee;
+    text-shadow: 3px 3px 5px #222;
+    background-repeat: no-repeat;
+  }
+  .maps-comparison {
+    background-image: url(./images/maps-comparison.jpg);
+    background-position: center 5px;
+    background-size: 80%;
+    color: #eee;
+    text-shadow: 3px 3px 5px #222;
+    background-repeat: no-repeat;
+  }
+  .mindblown {
+    background-image: url(http://i.giphy.com/DqSw5gyRQ5yPC.gif);
+  }
+  .maptimedet {
+    background-image: url(./images/maptimedet.jpg);
+    background-position: center 5px;
+    background-size: 100%;
+    color: #98d3d4;
+    text-shadow: 3px 3px 5px #222;
+    background-repeat: no-repeat;
+  }
+  .maptimeboulder {
+    background-image: url(./images/maptimeboulder.jpg);
+    background-position: center 5px;
+    background-size: 100%;
+    color: #98d3d4;
+    text-shadow: 3px 3px 5px #222;
+    background-repeat: no-repeat;
+  }
+  .beth-sf {
+    background-image: url(./images/beth-sf.jpg);
+    background-position: center 55px;
+    color: #eee;
+    text-shadow: 3px 3px 5px #222;
+    background-repeat: no-repeat;
+  }
+  .maptimeber {
+    background-image: url(./images/maptimeber.jpg);
+    background-position: center 5px;
+    background-size: 100%;
+    color: #98d3d4;
+    text-shadow: 3px 3px 5px #222;
+    background-repeat: no-repeat;
+  }
+  .maptimeatx {
+    background-image: url(./images/maptimeatx.jpg);
+    background-position: center 5px;
+    background-size: 100%;
+    color: #98d3d4;
+    background-repeat: no-repeat;
+    text-shadow: 3px 3px 5px #222;
+  }
+  .maptimeams {
+    background-image: url(./images/maptimeams.jpg);
+    background-position: center 5px;
+    background-size: 100%;
+    color: #98d3d4;
+    text-shadow: 3px 3px 5px #222;
+    background-repeat: no-repeat;
+  }
+  .maptimesea {
+    background-image: url(./images/maptimesea.jpg);
+    background-position: center 5px;
+    background-size: 100%;
+    color: #98d3d4;
+    text-shadow: 3px 3px 5px #222;
+    background-repeat: no-repeat;
+  }
+  .kathmandu {
+    background-image: url(./images/kathmandu.gif);
+    background-position: center 5px;
+    background-size: 100%;
+    color: #eee;
+    text-shadow: 3px 3px 5px #222;
+    background-repeat: no-repeat;
+  }
+  .maptimephl {
+    background-image: url(./images/maptimephl.jpg);
+    background-position: center 55px;
+    background-size: 100%;
+    color: #98d3d4;
+    text-shadow: 3px 3px 5px #222;
+    background-repeat: no-repeat;
+  }
+  .maptimeoak {
+    background-image: url(./images/maptimeoak.jpg);
+    background-position: center 5px;
+    background-size: 100%;
+    color: #98d3d4;
+    text-shadow: 3px 3px 5px #222;
+    background-repeat: no-repeat;
+  }
+  .sotmus13 {
+    background-image: url(./images/sotmus13.jpg);
+    background-size: 100%;
+    color: #98d3d4;
+    text-shadow: 3px 3px 5px #222;
+  }
+  .maptimenyc {
+    background-image: url(./images/maptimenyc.jpg);
+    background-position: center 5px;
+    background-size: 100%;
+    color: #98d3d4;
+    text-shadow: 3px 3px 5px #222;
+    background-repeat: no-repeat;
+  }
+  .slack {
+    background-image: url(./images/slack.png);
+    background-position: center 5px;
+    background-size: 100%;
+    text-shadow: 3px 3px 5px #222;
+    background-repeat: no-repeat;
+  }
+  .chapters {
+    background-image: url(./images/chapters.png);
+    background-position: center 55px;
+    background-size: 100%;
+    text-shadow: 3px 3px 5px #222;
+    background-repeat: no-repeat;
+  }
+  .beth {
+    background-image: url(./images/beth-lyzi.jpg);
+    background-position: center 5px;
+    background-size: 100%;
+    text-shadow: 3px 3px 5px #222;
+    background-repeat: no-repeat;
+    color: #98d3d4;
+  }
+  .alyssa {
+    background-image: url(./images/alyssa-wright.jpg);
+    background-position: center 5px;
+    color: #98d3d4;
+    background-size: 45%;
+    text-shadow: 3px 3px 5px #222;
+    background-repeat: no-repeat;
+  }
+  .beginner-focused {
+    background-image: url(./images/beginner-focused.jpg);
+    background-position: center 35px;
+    background-size: 100%;
+    text-shadow: 3px 3px 5px #222;
+    background-repeat: no-repeat;
+  }
+  .nepal-alpes {
+    background-image: url(./images/nepal-alpes.png);
+    background-position: center 5px;
+    background-size: 100%;
+    text-shadow: 3px 3px 5px #222;
+    background-repeat: no-repeat;
+  }
+  .nepal-dc {
+    background-image: url(./images/nepal-dc.png);
+    background-position: center 5px;
+    background-size: 100%;
+    text-shadow: 3px 3px 5px #222;
+    background-repeat: no-repeat;
+  }
+  .nepal-boulder {
+    background-image: url(./images/nepal-boulder.png);
+    background-position: center 5px;
+    background-size: 100%;
+    text-shadow: 3px 3px 5px #222;
+    background-repeat: no-repeat;
+  }
+  .nepal-vancouver {
+    background-image: url(./images/nepal-vancouver.png);
+    background-position: center 5px;
+    background-size: 100%;
+    text-shadow: 3px 3px 5px #222;
+    background-repeat: no-repeat;
+  }
+  .nepal-corvallis {
+    background-image: url(./images/nepal-corvallis.png);
+    background-position: center 5px;
+    background-size: 100%;
+    text-shadow: 3px 3px 5px #222;
+    background-repeat: no-repeat;
+  }
+  .nepal-sf {
+    background-image: url(./images/nepal-sf.png);
+    background-position: center 5px;
+    background-size: 100%;
+    text-shadow: 3px 3px 5px #222;
+    background-repeat: no-repeat;
+  }
+  .nepal-msp {
+    background-image: url(./images/nepal-msp.png);
+    background-position: center 5px;
+    background-size: 100%;
+    text-shadow: 3px 3px 5px #222;
+    background-repeat: no-repeat;
+  }
+  .nepal-milan {
+    background-image: url(./images/nepal-milan.png);
+    background-position: center 5px;
+    background-size: 100%;
+    text-shadow: 3px 3px 5px #222;
+    background-repeat: no-repeat;
+  }
+  .nepal-soton {
+    background-image: url(./images/nepal-soton.png);
+    background-position: center 5px;
+    background-size: 100%;
+    text-shadow: 3px 3px 5px #222;
+    background-repeat: no-repeat;
+  }
+  .nepal-tromso {
+    background-image: url(./images/nepal-tromso.png);
+    background-position: center 5px;
+    background-size: 100%;
+    text-shadow: 3px 3px 5px #222;
+    background-repeat: no-repeat;
+  }
+  .nepal-austin {
+    background-image: url(./images/nepal-austin.png);
+    background-position: center 5px;
+    background-size: 100%;
+    text-shadow: 3px 3px 5px #222;
+    background-repeat: no-repeat;
+  }
+  .osm-users {
+    background-image: url(./images/osm-users.png);
+    background-position: center 5px;
+    background-size: 25%;
+    text-shadow: 3px 3px 5px #222;
+    background-repeat: no-repeat;
+  }
+
+</style>
+<script src='big.js'></script>
+</head><body>
+
+<div><strong>Building Mapping Communities:</strong> <em>HOT</em> + <em>Maptime</em> + <em>rainbows</em> + <em>puppies</em></div>
+<div data-bodyclass='puppy1'></div>
+<div><em>Hi!</em> My name is <strong>Lyzi Diamond</strong>.</div>
+<div>I do <strong>Support</strong> and <strong>Education</strong> at <a href='https://mapbox.com'>Mapbox</a>. I am also 1/4 of <a href='http://maptime.io'>MaptimeHQ</a>.</div>
+<div>So <em>what is Maptime</em>? And what does it have to do with <strong>HOT</strong>?</div>
+<div>This story starts in <strong>June of 2013</strong> with two <em>incredible women</em>.</div>
+<div data-bodyclass='alyssa'><br><br><br><br><br>Alyssa Wright speaking at State of the Map US 2013</div>
+<div data-bodyclass='beth'><br><br><br><br><br>Beth Schechter (and me)</div>
+<div data-bodyclass='sotmus13'>At SOTMUS 2013, Alyssa spoke about diversity in OSM.</div>
+<div>Her talk was <strong>inspiring</strong>. (If you <em>saw</em> it, you <strong>know</strong> what I mean!)</div>
+<div>Beth was <em>so</em> inspired, she <strong>literally</strong> set aside some <em>time</em> to make <strong>maps</strong>.</div>
+<div data-bodyclass='beth-sf'></div>
+<div>At the <em>same time</em>, I was up in <strong>Portland, Oregon</strong> trying to create some <em>"map time"</em> of my own.</div>
+<div><strong>Beth</strong>, with her colleagues <strong>Alan</strong> and <strong>Camille</strong>, turned their meetup into <em>Maptime</em>.</div>
+<div>When I turned mine into <strong>MaptimePDX</strong>, theirs became <em>MaptimeSF</em>.</div>
+<div>Then <strong>OpenGeoCLE</strong> in <em>Cleveland</em>. Then <strong>MaptimeNYC</strong>. <strong>MaptimeME</strong>. <strong>MaptimeNullIsland</strong>.</div>
+<div>Fast forward to <em>now</em>...</div>
+<div data-bodyclass='chapters'>60 chapters</div>
+<div data-bodyclass='slack'><br><br><br><br><strong>150 organizers</strong><br><em>11 timezones</em></div>
+<div data-bodyclass='maptimenyc'>MaptimeNYC</div>
+<div data-bodyclass='maptimeoak'>MaptimeOAK</div>
+<div data-bodyclass='maptimephl'>MaptimePHL</div>
+<div data-bodyclass='maptimeams'>MaptimeAMS</div>
+<div data-bodyclass='maptimeatx'>MaptimeATX</div>
+<div data-bodyclass='maptimesea'>MaptimeSEA</div>
+<div data-bodyclass='maptimeber'>MaptimeBER</div>
+<div data-bodyclass='maptimeboulder'>MaptimeBoulder</div>
+<div data-bodyclass='maptimedet'>MaptimeDET</div>
+<div>... and <em>many</em>, <em>many</em> others.</div>
+<div>So <strong>what</strong> is this <em>Maptime</em> thing? <strong>How</strong> did it grow so quickly? And <strong>why</strong> am I talking about it at the <em>HOT Summit</em>?</div>
+<div><strong>Maptime</strong> is a collection of <em>beginner-focused</em> community groups</div>
+<div>for <strong>learning</strong> geospatial <em>technology</em>, <em>techniques</em>, and <em>concepts</em>,</div>
+<div>particularly using <em>open source</em> tools and <em>hands-on</em> practice and exercises.</div>
+<div data-bodyclass='beginner-focused'></div>
+<div>Maptime is about <strong>excitement</strong> and <strong>encouragement</strong> around <em>learning</em>.</div>
+<div data-bodyclass='maptime-excitement'></div>
+<div>We believe maps are <strong>totally awesome</strong> and <em>super valuable</em> for <strong>cognitive development</strong>, <em>social awareness</em>, and <strong>building community</strong> beyond superficial differences.</div>
+<div>One of my <em>favorite</em> things about Maptime is how the community has emerged <strong>organically</strong>.</div>
+<div>Chapters happen where there are <em>excited organizers</em> and <strong>people who want to learn</strong>.</div>
+<div>Each chapter has a <strong>different model</strong> depending on its <em>organizers</em> and <em>attendees</em>.</div>
+<div>Some chapters focus on <strong>tutorials</strong>, while some prefer <em>project nights</em> and <em>mapathons</em>.</div>
+<div>We have <strong>central communication</strong> (using Slack and Twitter), but there are no <em>mandates</em> from HQ.</div>
+<div>So let's fast forward <em>again</em>. April 25, 2015.</div>
+<div data-bodyclass='puppy1'></div>
+<div data-bodyclass='maps-comparison'></div>
+<div>As of April 27th:</div>
+<div data-bodyclass='kathmandu'></div>
+<div>This is a <strong>huge</strong> lift from an <em>amazing</em> community of mappers.</div>
+<div>Today is <em>May 2nd</em>.</div>
+<div>The inimitable <strong>Andrew Wiseman</strong> reached out to the Maptime Slack channel on <em>April 26th</em>...</div>
+<div>... but by then the organizing was <strong>already underway</strong>.</div>
+<div data-bodyclass='nepal-alpes'></div>
+<div data-bodyclass='nepal-dc'></div>
+<div data-bodyclass='nepal-boulder'></div>
+<div data-bodyclass='nepal-vancouver'></div>
+<div data-bodyclass='nepal-corvallis'></div>
+<div data-bodyclass='nepal-sf'></div>
+<div data-bodyclass='nepal-msp'></div>
+<div data-bodyclass='nepal-milan'></div>
+<div data-bodyclass='nepal-soton'></div>
+<div data-bodyclass='nepal-tromso'></div>
+<div data-bodyclass='nepal-austin'></div>
+<div data-bodyclass='mindblown'></div>
+<div>Of course, this is a <em>drop in the bucket</em>.</div>
+<div>But it illustrates a point worth making <strong>explicitly</strong>.</div>
+<div>Maptime exists because <strong>community</strong>, <strong>inclusivity</strong>, and <strong>accessibility</strong> are <em>important</em> and <em>necessary</em> components of positive learning experiences.</div>
+<div>Community. <strong>Inclusivity.</strong> <em>Accessibility.</em></div>
+<div>Does this sound <strong>familiar</strong>?</div>
+<div data-bodyclass='hotosm'></div>
+<div>It should come as <em>no surprise</em>, then, that <strong>Maptime</strong> and <em>OpenStreetMap</em> are a <strong>natural pair</strong>.</div>
+<div><em>Any guesses</em> what the most <strong>popular</strong> Maptime meetup topic is?</div>
+<div data-bodyclass='osm-101'><br><br><br><br>MaptimeSOTON</div>
+<div>But it can be <strong>hard</strong> to teach about <em>OpenStreetMap</em>.</div>
+<div>OSM has its <strong>own language</strong> and a <em>huge ecosystem</em> with <strong>tons</strong> of use cases.</div>
+<div>There are an <em>overwhelming number</em> of users who make <strong>one or two edits</strong> to OSM and <em>never edit again</em>.</div>
+<div>Why?</div>
+<div>It's no surprise that the <strong>OpenStreetMap community</strong> can be difficult for beginners.</div>
+<div>But <em>look around</em>. Do you see that here?</div>
+<div><strong>Maptime</strong> and <strong>HOT</strong> are obviously <em>different communities</em> with <em>different goals</em>.</div>
+<div>For <strong>both</strong> of these communities, we turn our focus to <em>beginners</em>.</div>
+<div>Community. <strong>Inclusivity.</strong> <em>Accessibility.</em></div>
+<div>OpenStreetMap has its <strong>own language</strong> and teaching is a <em>full-time job</em>.</div>
+<div><strong>Open source technology communities</strong> all have <em>similar problems</em>.</div>
+<div>It is <strong>difficult</strong> to join an open source community as a <em>beginner</em>...</div>
+<div>... and it's <strong>difficult</strong> for an open source community to <em>open itself up</em> to beginners.</div>
+<div><strong>Open source projects</strong> in <em>our time</em> typically start when people with a <strong>common skillset</strong> have a <strong>common problem</strong> or <strong>frustration</strong> that they want to <em>solve together</em>.</div>
+<div>Doing that in the <strong>open</strong> means <em>more people</em> will contribute and it will <strong>mature faster</strong>.</div>
+<div>But there <strong>comes a time</strong> when the <em>project</em> has <strong>users</strong> who are <em>not</em> the same as the <strong>developers</strong>.</div>
+<div>This is a <em>problem</em> without a <strong>solution</strong>.</div>
+<div data-bodyclass='osm-users'></div>
+<div>But <em>HOT</em> and <em>Maptime</em> are a <strong>shiny beacon of shinyness</strong> because we make it <em>real</em>.</div>
+<div>We provide <strong>entry points</strong> for <em>beginners</em> to mapping.</div>
+<div>We <strong>take the time</strong> for <em>training</em> and <em>explanation</em> with the <strong>understanding</strong> that these things are <em>difficult</em>.</div>
+<div>Put <strong>another</strong> way:</div>
+<div>Empathy.</div>
+<div>Not just the <em>obvious</em> empathy of <strong>humanitarian</strong> and <strong>educational</strong> work.</div>
+<div>Empathy for <em>every human being</em>.</div>
+<div>Maptime and OpenStreetMap are both projects focused on <strong>making the world a better place</strong> through <em>collaboration</em>, <em>shared knowledge</em>, and <em>exchange of information</em>.</div>
+<div>To make it just a little more <strong>meta</strong>:</div>
+<div>We can use our <em>awesome</em> communities to make the <strong>rest</strong> of the open source mapping world just a little more <em>awesome</em>.</div>
+<div>We can <strong>continue</strong> doing what we're doing <em>here today</em>: <strong>telling our story</strong>.</div>
+<div>We can <em>keep meeting</em> and <strong>keep working</strong> and <em>keep building</em>.</div>
+<div>We're doing the <strong>hardest work</strong> already.</div>
+<div>Let's keep going.</div>
+<div data-bodyclass='maptime-excitement'></div>
+<div><em>Maptime Summit!</em> <a href='http://maptime.io/maptime-summit-2015/'>maptime.io /maptime-summit-2015</a></div>
+<div>Thanks.</div>
+<div>Lyzi Diamond | <a href='https://twitter.com/lyzidiamond'>@lyzidiamond</a> | <strong>lyzi@mapbox.com</strong></div>
+
+
+
+
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-47757349-1', 'lyzidiamond.com');
+  ga('send', 'pageview');
+</script>
+
+</body>
+</html>
